@@ -7,6 +7,11 @@
 // --------------------INSTRUCTOR EXAMPLE: Create a function that takes in two strings and determines which of the two strings has more characters. Use the two sets of test variables provided.
 
 // Pseudo code:
+// write arrow function that takes 2 arguments
+// create if-statement and compare the lengths of both of the strings
+// if 1 > 2 return 1
+// if 2 > 1 return 2
+// if 1 === 2 return 'tie'
 
 // Set one:
 const fruit1 = "apple"
@@ -17,10 +22,25 @@ const fruit2 = "banana"
 const fruit3 = "cherry"
 const fruit4 = "kiwi"
 // Expected outcome: "cherry"
+const fruitSize = (fruitA, fruitB) => {
+  if(fruitA.length > fruitB.length) {
+    return fruitA;
+  } else if(fruitB.length > fruitA.length) {
+    return fruitB;
+  } else {
+    return "They are the same size"
+  }
+}
+console.log(fruitSize(fruit1, fruit2));
+console.log(fruitSize(fruit3, fruit4));
 
 // --------------------1) Create a function that takes in a number and determines if the given number is below boiling point, at boiling point, or above boiling point. Boiling point is 212 degrees Fahrenheit. Use the test variables provided below.
 
 // Pseudo code:
+// set variable to boiling point
+// define arrow function that takes 1 number argument
+// ternary operator for higher or lower
+// write if condition for equal numbers (do this before ternary)
 
 const temperature1 = 42
 // Expected output: "42 is below boiling point"
@@ -30,6 +50,16 @@ const temperature2 = 350
 
 const temperature3 = 212
 // Expected output: "212 is at boiling point"
+let boiling = 212
+const boilingPoint = (temp) => {
+  if(temp === boiling) {
+    return `${temp} is at boiling point`
+  }
+  return (temp > boiling ? `${temp} is above boiling point` : `${temp} is below boiling point`)
+}
+console.log(boilingPoint(temperature1));
+console.log(boilingPoint(temperature2));
+console.log(boilingPoint(temperature3));
 
 // --------------------2) Create the code that will combine the two arrays and return the length using the test variables provided below.
 
